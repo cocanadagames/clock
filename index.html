@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">  
+    <title>ClockApp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="quote">
+            <div class="quoteContainerOne">
+                <p id="quotePara">“The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”</p>
+                <img id="quoteRefresh" src="Assets/icon-refresh.svg" alt="">               
+            </div>        
+            <p id="quoteAuthor">Ada Lovelace</p>
+        </div>
+
+        <div class="bottom">
+            <div class="timeContainer">
+                <div class="greetingContainer">
+                    <img src="Assets/icon-sun.svg" alt="" width="16px" height="16px">
+                    <p><span id="greeting">GOOD MORNING</span><span id="currently">, IT'S CURRENTLY</span></p>
+                </div>
+              
+                <div class="time">
+                    <h1>03:45</h1>
+                    <p>BST</p>
+                </div>
+                <h4>IN <span id="city">LONDON</span>, <span id="country">UK</span></h4>                
+            </div>
+
+            <button class="moreButton">             
+                <span id="buttonText">MORE</span>
+                <div class="downArrowContainer">
+                    <img src="Assets/icon-arrow-down.svg" id="arrowImg" alt="">
+                </div>
+            </button>           
+        </div>
+    </div>
+    
+    <div class="more moreNone">
+        <div class="moreContainer">
+            <div class="moreLeft">
+                <div class="currentTZ">
+                    <p>CURRENT TIMEZONE</p>
+                    <h4>Europe/London</h4>
+                </div>
+                <div class="doy">
+                    <p>DAY OF THE YEAR</p>
+                    <h4>295</h4>
+                </div>
+            </div>
+            <hr class="hrc">            
+            <div class="moreRight">
+                <div class="dow">
+                    <p>DAY OF WEEK</p>
+                    <h4>5</h4>
+                </div>
+                <div class="we">
+                    <p>WEEK NUMBER</p>
+                    <h4>42</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/bg-image-daytime.jpg);
+    /* background-image: url(Assets/bg-image-daytime.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    height: 800px;
+    /* border: 2px solid blue; */
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 540px;
+    margin-top: 40px;
+    /* border: 2px solid blue; */
+}
+
+.quoteContainerOne {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    /* border: 2px solid rgb(24, 210, 135); */
+}
+
+#quotePara {
+    color: #FFF;
+    font-size: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 28px;
+}
+
+#quoteRefresh {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+#quoteAuthor {
+    color: #FFF;
+    font-size: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    color: #FFF;
+    /* border: 1px solid white; */
+    /* margin-top: 300px; */
+    position: relative;
+    bottom: -300px;
+
+}
+
+.timeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greetingContainer {
+    display: flex;
+    align-items: center;
+}
+
+.timeContainer p {
+    margin-left: 12px;
+
+    color: #FFF;
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.timeContainer h4 {
+    color: #FFF;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+
+.time {
+    display: flex;
+    align-items: baseline;
+    margin-right: 24px;
+}
+
+.time h1 {
+    margin: 0px;
+    color: #FFF;
+    font-size: 160px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200px;
+    letter-spacing: -5px;
+}
+
+.time p {
+    margin: 0px;
+    margin-left: 16px;
+    color: #FFF;
+    font-size: 40px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.moreButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50px;
+    height: 58px;
+    width: 146px;
+    background-color: white;
+    margin-bottom: 100px;
+
+    color: #000;
+    opacity: 0.5;
+    font-size: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.moreButton:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+
+.downArrowContainer {
+    background-color: black;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.more {
+    width: 100%;
+    height: 350px;
+    margin-top: 120px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px;
+
+    background-color: rgba(234, 234, 234, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.moreNone {
+    display: none;
+}
+
+.moreContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.moreLeft {
+    /* border: 2px solid red; */
+    min-width: 450px;
+}
+
+.moreRight {
+    /* border: 2px solid red; */
+    min-width: 450px;
+}
+
+
+
+.currentTZ p {
+    color: #303030;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.currentTZ h4 {
+    color: #303030;
+    font-size: 56px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.doy p {
+    color: #303030;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 24px 0px 0px 0px;
+}
+
+.doy h4 {
+    color: #303030;
+    font-size: 56px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.dow p {
+    color: #303030;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.dow h4 {
+    color: #303030;
+    font-size: 56px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.we p {
+    color: #303030;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 24px 0px 0px 0px;
+}
+
+.we h4 {
+    color: #303030;
+    font-size: 56px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+hr {
+    opacity: 0.2;
+    height: 200px;
+    width: 1px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-color: #303030;
+    border: none;
+}
+
+
+
+/********************************************************/
+/********************************************************/
+/********************************************************/
+
+@media(max-width:1200px) {
+    .moreLeft {
+        /* border: 2px solid red; */
+        min-width: 300px;
+    }
+
+    .moreRight {
+        /* border: 2px solid red; */
+        min-width: 300px;
+    }
+
+    .currentTZ h4 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .doy h4 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .dow h4 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .we h4 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .hrc {
+        display: none;
+    }
+}
+
+@media(max-width:900px) {
+    .bottom {
+        align-items: center;
+    }
+
+    .more {
+        height: 500px;
+    }
+
+
+    #currently {
+        display: none;
+    }
+
+    .moreButton {
+        margin: 16px 0px;
+    }
+
+    .time h1 {
+        margin: 0px;
+        color: #FFF;
+        font-size: 80px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 80px;
+        letter-spacing: -5px;
+    }
+
+    .time {
+        display: flex;
+        align-items: baseline;
+        margin-right: 24px;
+        height: auto;
+    }
+
+    .time p {
+        margin: 0px;
+        margin-left: 16px;
+        color: #FFF;
+        font-size: 24px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    .timeContainer h4 {
+        color: #FFF;
+        font-size: 16px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 4.8px;
+        text-transform: uppercase;
+        margin: 16px 0px;
+    }
+
+    .currentTZ p,
+    .doy p,
+    .dow p,
+    .we p {
+        color: #303030;
+        font-size: 16px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0px;
+    }
+
+    .currentTZ h4,
+    .doy h4,
+    .dow h4,
+    .we h4 {
+        color: #303030;
+        text-align: right;
+        font-size: 30px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 300px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .container {
+        width: 80%;
+        height: 600px;
+        /* border: 2px solid blue; */
+    }
+
+    #quotePara {
+        color: #FFF;
+        font-size: 12px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    #quoteAuthor {
+        color: #FFF;
+        font-size: 12px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    #greeting {
+        color: #FFF;
+        font-size: 15px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .time h1 {
+        color: #FFF;
+        font-size: 60px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -2.5px;
+    }
+
+    .timeContainer h4 {
+        color: #FFF;
+        font-size: 15px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .currentTZ,
+    .doy,
+    .dow,
+    .we {
+        display: flex;
+    }
+
+    .currentTZ p,
+    .doy p,
+    .dow p,
+    .we p {
+        color: #303030;
+        font-size: 10px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0px;
+        width: 150px;
+    }
+
+    .currentTZ h4,
+    .doy h4,
+    .dow h4,
+    .we h4 {
+        color: #303030;
+        text-align: right;
+        font-size: 16px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: right;
+        width: 150px;
+        margin-bottom: 0px;
+    }
+
+    .more {
+        height: 200px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* .moreContainer{
+
+    } */
+
+}
