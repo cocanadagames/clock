@@ -1,6 +1,6 @@
 console.log("Connected");
 
-axios.get(`http://worldtimeapi.org/api/ip`)
+axios.get(`https://worldtimeapi.org/api/ip`)
     .then((res) => {
         console.log(res);
         console.log(res.data.abbreviation);
