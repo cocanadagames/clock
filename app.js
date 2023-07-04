@@ -24,30 +24,17 @@ axios.get(`http://worldtimeapi.org/api/ip`)
 
         const we = document.querySelector(".we h4");
         dow.we = res.data.week_number;
-    })
 
-axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=2c32a79d9b5c4e06a64a458d3b261cfb')
-    .then((res) => {
-        console.log("City: ", res.data.city);
-        console.log("Country: ", res.data.country_code2);
-        const localTime = res.data.time_zone.current_time.slice(11, 16);
-        console.log("Time: ", localTime);
+        // *******************************************************************
+
+        const datetime = res.data.datetime.slice(11, 16)
+        console.log("Time: ", datetime);
 
         const time = document.querySelector(".time h1");
-        console.log(time);
-        time.textContent = localTime;
-
-        const city = document.querySelector("#city");
-        console.log(city);
-        city.textContent = res.data.city;
-
-        const country = document.querySelector("#country");
-        console.log(country);
-        country.textContent = res.data.country_code2;
+        time.textContent = datetime;
 
         const greeting = document.querySelector("#greeting");
-        console.log(greeting);
-        const greetingTime = Number(localTime.slice(0, 2));
+        const greetingTime = Number(datetime.slice(0, 2));
 
         if (greetingTime > 0 && greetingTime < 15) {
             greeting.textContent = "GOOD MORNING";
@@ -55,6 +42,24 @@ axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=2c32a79d9b5c4e06a64a458d3b2
         else {
             greeting.textContent = "GOOD EVENING";
         }
+    })
+
+// *******************************************************************
+
+axios.get('https://ipapi.co/json/')
+    .then((res) => {
+        console.log(res);
+        console.log("City: ", res.data.city);
+        console.log("Country: ", res.data.country);
+
+        const city = document.querySelector("#city");
+        console.log(city);
+        city.textContent = res.data.city;
+
+        const country = document.querySelector("#country");
+        console.log(country);
+        country.textContent = res.data.country;
+
 
         const refresh = document.querySelector("#quoteRefresh");
         refresh.addEventListener("click", () => {
@@ -63,6 +68,8 @@ axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=2c32a79d9b5c4e06a64a458d3b2
         })
 
     })
+
+// *******************************************************************
 
 axios.get(`https://api.quotable.io/quotes/random`)
     .then((res) => {
@@ -78,15 +85,14 @@ axios.get(`https://api.quotable.io/quotes/random`)
         quoteAuthor.textContent = res.data[0].author;
     })
 
+// *******************************************************************
+
 const button = document.querySelector(".moreButton")
 const more = document.querySelector(".more");
 const buttonText = document.querySelector("#buttonText");
 const arrowImg = document.querySelector(".downArrowContainer img");
 
-
 button.addEventListener("click", () => {
-
-
     more.classList.toggle("moreNone");
 
     if (more.classList.contains("moreNone")) {
